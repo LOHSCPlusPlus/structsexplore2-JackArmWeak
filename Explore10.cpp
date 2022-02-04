@@ -9,11 +9,16 @@ Broken::Broken() {
     // int does not have a default constructor
     // modify this code so that all elements in values
     // are set to 0.
+    for(int i = 0; i < 4; i++) {
+      values[i] = 0;
+    }
 }
 Broken::Broken(int initialValues[4]) {
     // Change only this code so that values will hold the
     // values in initialValues
-    values = initialValues;
+    for(int i = 0; i < 4; i++) {
+      values[i] = initialValues[i];
+    }
 }
 
 void PrintBroken(Broken x) {
