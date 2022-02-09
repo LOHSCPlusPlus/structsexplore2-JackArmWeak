@@ -44,9 +44,17 @@ Pet readPetFromFile(ifstream &file) {
 
 int main() {
     ifstream petFile("pets.txt");
+
+    Pet p[5]; 
+    int counter = 0;
+
     while(petFile.peek() != EOF) {
-        Pet a =readPetFromFile(petFile);
-        printPet(a);
-        cout << endl;
+        p[counter] = readPetFromFile(petFile);
+        counter++;
+    }
+
+    for(int i = 4; i > 0; i--) {
+      printPet(p[i]);
+      cout << endl;
     }
 }
